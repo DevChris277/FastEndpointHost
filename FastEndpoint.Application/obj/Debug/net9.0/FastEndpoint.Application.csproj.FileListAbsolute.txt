@@ -9,3 +9,8 @@ C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\refint\FastEndpoint.Application.dll
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndpoint.Application.pdb
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\ref\FastEndpoint.Application.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\bin\Debug\net9.0\FastEndpoint.Domain.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\bin\Debug\net9.0\FastEndpoint.Domain.pdb
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndpoint.Application.csproj.AssemblyReference.cache
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndpoint.Application.sourcelink.json
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndp.ABDFB854.Up2Date

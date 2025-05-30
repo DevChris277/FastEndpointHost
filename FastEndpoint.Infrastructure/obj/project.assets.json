@@ -1219,6 +1219,19 @@
           }
         }
       },
+      "SequentialGuid/4.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/SequentialGuid.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/SequentialGuid.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.CodeDom/6.0.0": {
         "type": "package",
         "compile": {
@@ -1480,6 +1493,9 @@
       "FastEndpoint.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FastEndpoint.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/FastEndpoint.Application.dll": {}
         },
@@ -1490,6 +1506,9 @@
       "FastEndpoint.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "SequentialGuid": "4.0.6"
+        },
         "compile": {
           "bin/placeholder/FastEndpoint.Domain.dll": {}
         },
@@ -3637,6 +3656,29 @@
         "opentelemetry-icon-color.png",
         "opentelemetry.extensions.hosting.1.9.0.nupkg.sha512",
         "opentelemetry.extensions.hosting.nuspec"
+      ]
+    },
+    "SequentialGuid/4.0.6": {
+      "sha512": "8n9ZXiNNlkfQZiWf4mDKBxJ9W/aNSeuhpjR8gaE8bkEWse+Eub1GZx5KBAp3MzWPOU0gVdZXPAQ8PuvVF5mLEw==",
+      "type": "package",
+      "path": "sequentialguid/4.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net462/SequentialGuid.dll",
+        "lib/net462/SequentialGuid.xml",
+        "lib/net8.0/SequentialGuid.dll",
+        "lib/net8.0/SequentialGuid.xml",
+        "lib/net9.0/SequentialGuid.dll",
+        "lib/net9.0/SequentialGuid.xml",
+        "lib/netstandard2.0/SequentialGuid.dll",
+        "lib/netstandard2.0/SequentialGuid.xml",
+        "lib/netstandard2.1/SequentialGuid.dll",
+        "lib/netstandard2.1/SequentialGuid.xml",
+        "sequentialguid.4.0.6.nupkg.sha512",
+        "sequentialguid.nuspec"
       ]
     },
     "System.CodeDom/6.0.0": {

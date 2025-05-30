@@ -1,7 +1,8 @@
 
+using FastEndpoint.Application.Interfaces.Persistence;
 using FastEndpoint.Application.Interfaces.Services;
 using FastEndpoint.Domain.Common.Settings;
-
+using FastEndpoint.Infrastructure.Persistence.Repositories;
 using FastEndpoint.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -28,8 +29,7 @@ public static class DependencyInjection
         ConfigurationManager configuration)
     {
         services.AddSingleton<IJwtTokenProvider, JwtTokenProvider>();
-
-
+        
         return services;
     }
 
@@ -37,10 +37,8 @@ public static class DependencyInjection
         this IServiceCollection services,
         ConfigurationManager configuration)
     {
-        // services.AddDbContextFactory<FepContext>(options =>
-        //     options.UseNpgsql(configuration.GetConnectionString("FepDb")));
-
-       
+        services.AddScoped<IUserRepository, UserRepository>();
+        
         return services;
     }
 

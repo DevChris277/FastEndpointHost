@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FastEndpoint.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7376d5e34ff818fc055f8526eb5c0b93d36419f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("FastEndpoint.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FastEndpoint.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -25,7 +25,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\joani\\RiderProjects\\FastEndpointHost\\FastEndpoint.Domain\\FastEndpoint.Domain.csproj": {
+                "projectPath": "C:\\Users\\joani\\RiderProjects\\FastEndpointHost\\FastEndpoint.Domain\\FastEndpoint.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -102,6 +106,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "SequentialGuid": {
+              "target": "Package",
+              "version": "[4.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

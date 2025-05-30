@@ -1,11 +1,51 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "SequentialGuid/4.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/SequentialGuid.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/SequentialGuid.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SequentialGuid/4.0.6": {
+      "sha512": "8n9ZXiNNlkfQZiWf4mDKBxJ9W/aNSeuhpjR8gaE8bkEWse+Eub1GZx5KBAp3MzWPOU0gVdZXPAQ8PuvVF5mLEw==",
+      "type": "package",
+      "path": "sequentialguid/4.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net462/SequentialGuid.dll",
+        "lib/net462/SequentialGuid.xml",
+        "lib/net8.0/SequentialGuid.dll",
+        "lib/net8.0/SequentialGuid.xml",
+        "lib/net9.0/SequentialGuid.dll",
+        "lib/net9.0/SequentialGuid.xml",
+        "lib/netstandard2.0/SequentialGuid.dll",
+        "lib/netstandard2.0/SequentialGuid.xml",
+        "lib/netstandard2.1/SequentialGuid.dll",
+        "lib/netstandard2.1/SequentialGuid.xml",
+        "sequentialguid.4.0.6.nupkg.sha512",
+        "sequentialguid.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "SequentialGuid >= 4.0.6"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\joani\\.nuget\\packages\\": {}
@@ -49,6 +89,12 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
+        "dependencies": {
+          "SequentialGuid": {
+            "target": "Package",
+            "version": "[4.0.6, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
