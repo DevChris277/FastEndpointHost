@@ -1,0 +1,11 @@
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\bin\Debug\net9.0\FastEndpoint.Domain.deps.json
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\bin\Debug\net9.0\FastEndpoint.Domain.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\bin\Debug\net9.0\FastEndpoint.Domain.pdb
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\FastEndpoint.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\FastEndpoint.Domain.AssemblyInfoInputs.cache
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\FastEndpoint.Domain.AssemblyInfo.cs
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\FastEndpoint.Domain.csproj.CoreCompileInputs.cache
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\FastEndpoint.Domain.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\refint\FastEndpoint.Domain.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\FastEndpoint.Domain.pdb
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\ref\FastEndpoint.Domain.dll

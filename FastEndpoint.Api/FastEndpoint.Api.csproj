@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FastEndpoints" Version="6.2.0-beta.3" />
+        <PackageReference Include="FastEndpoints.Security" Version="6.2.0-beta.3" />
+        <PackageReference Include="FastEndpoints.Swagger" Version="6.2.0-beta.3" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FastEndpoint.Contracts\FastEndpoint.Contracts.csproj" />
+      <ProjectReference Include="..\FastEndpoint.Infrastructure\FastEndpoint.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

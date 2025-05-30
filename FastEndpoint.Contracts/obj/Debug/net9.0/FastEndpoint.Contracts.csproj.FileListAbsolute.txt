@@ -1,0 +1,11 @@
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\bin\Debug\net9.0\FastEndpoint.Contracts.deps.json
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\bin\Debug\net9.0\FastEndpoint.Contracts.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\bin\Debug\net9.0\FastEndpoint.Contracts.pdb
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\FastEndpoint.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\FastEndpoint.Contracts.AssemblyInfoInputs.cache
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\FastEndpoint.Contracts.AssemblyInfo.cs
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\FastEndpoint.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\FastEndpoint.Contracts.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\refint\FastEndpoint.Contracts.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\FastEndpoint.Contracts.pdb
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\ref\FastEndpoint.Contracts.dll

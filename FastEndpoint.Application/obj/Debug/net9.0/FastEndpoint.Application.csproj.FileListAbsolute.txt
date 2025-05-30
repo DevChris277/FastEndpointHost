@@ -1,0 +1,11 @@
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\bin\Debug\net9.0\FastEndpoint.Application.deps.json
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\bin\Debug\net9.0\FastEndpoint.Application.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\bin\Debug\net9.0\FastEndpoint.Application.pdb
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndpoint.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndpoint.Application.AssemblyInfoInputs.cache
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndpoint.Application.AssemblyInfo.cs
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndpoint.Application.csproj.CoreCompileInputs.cache
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndpoint.Application.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\refint\FastEndpoint.Application.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\FastEndpoint.Application.pdb
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Application\obj\Debug\net9.0\ref\FastEndpoint.Application.dll
