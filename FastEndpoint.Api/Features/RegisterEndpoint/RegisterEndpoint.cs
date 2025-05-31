@@ -14,7 +14,7 @@ public class RegisterEndpoint(IJwtTokenProvider jwtTokenProvider, IUserRepositor
 
     public override void Configure()
     {
-        Post("/api/auth/register");
+        Post("/auth/register");
         AllowAnonymous();
     }
 
