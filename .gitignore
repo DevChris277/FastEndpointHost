@@ -17,3 +17,18 @@ obj/
 *.user
 *.suo
 *.cache
+
+## .NET build output
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+*.cache
+
+# .NET specific files
+*.AssemblyInfo.cs
+*AssemblyReference.cache
+*AssemblyInfoInputs.cache
+*.[Cc]ache
+*.[Cc]ache.*
+
