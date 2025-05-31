@@ -37,6 +37,10 @@ public static class DependencyInjection
         ConfigurationManager configuration)
     {
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IAddressRepository, AddressRepository>();
+        services.AddScoped<IAccountRepository, AccountRepository>();
+        services.AddScoped<ICustomerRepository, CustomerRepository>();
+        services.AddScoped<IJobCardRepository, JobcardRepository>();
         
         return services;
     }
