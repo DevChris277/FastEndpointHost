@@ -4,7 +4,6 @@ using FastEndpoint.Application.Interfaces.Services;
 using FastEndpoint.Domain.Common.Settings;
 using FastEndpoint.Infrastructure.Persistence.Repositories;
 using FastEndpoint.Infrastructure.Services;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
