@@ -25,10 +25,4 @@ obj/
 [Oo]bj/
 *.cache
 
-# .NET specific files
-*.AssemblyInfo.cs
-*AssemblyReference.cache
-*AssemblyInfoInputs.cache
-*.[Cc]ache
-*.[Cc]ache.*
 
