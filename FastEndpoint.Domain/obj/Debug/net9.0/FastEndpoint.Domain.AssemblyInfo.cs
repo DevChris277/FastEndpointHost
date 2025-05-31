@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FastEndpoint.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e56a5c7bd3688cd6212dd13661118ebf5578c67b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e72d8919cac47d6ee5caf0fea1c0a18be20bb1cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("FastEndpoint.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FastEndpoint.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
