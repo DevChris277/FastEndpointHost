@@ -1,0 +1,28 @@
+# Ignore bin directories
+**/bin/
+bin/
+
+# Ignore dll files
+*.dll
+
+# Common .NET build output directories
+**/obj/
+obj/
+**/Debug/
+**/Release/
+
+# Visual Studio / Rider files
+.vs/
+.idea/
+*.user
+*.suo
+*.cache
+
+## .NET build output
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+*.cache
+
+
