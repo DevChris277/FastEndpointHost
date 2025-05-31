@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7HyIhVvzN74=",
+  "dgSpecHash": "pPg8WtE1h9Y=",
   "success": true,
   "projectFilePath": "C:\\Users\\joani\\RiderProjects\\FastEndpointHost\\FastEndpoint.Infrastructure\\FastEndpoint.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -62,6 +62,7 @@
     "C:\\Users\\joani\\.nuget\\packages\\opentelemetry.api\\1.9.0\\opentelemetry.api.1.9.0.nupkg.sha512",
     "C:\\Users\\joani\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.9.0\\opentelemetry.api.providerbuilderextensions.1.9.0.nupkg.sha512",
     "C:\\Users\\joani\\.nuget\\packages\\opentelemetry.extensions.hosting\\1.9.0\\opentelemetry.extensions.hosting.1.9.0.nupkg.sha512",
+    "C:\\Users\\joani\\.nuget\\packages\\sequentialguid\\4.0.6\\sequentialguid.4.0.6.nupkg.sha512",
     "C:\\Users\\joani\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\joani\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\joani\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",

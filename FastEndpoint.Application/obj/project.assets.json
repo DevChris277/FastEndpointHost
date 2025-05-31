@@ -1,11 +1,69 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "SequentialGuid/4.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/SequentialGuid.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/SequentialGuid.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "FastEndpoint.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "SequentialGuid": "4.0.6"
+        },
+        "compile": {
+          "bin/placeholder/FastEndpoint.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FastEndpoint.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SequentialGuid/4.0.6": {
+      "sha512": "8n9ZXiNNlkfQZiWf4mDKBxJ9W/aNSeuhpjR8gaE8bkEWse+Eub1GZx5KBAp3MzWPOU0gVdZXPAQ8PuvVF5mLEw==",
+      "type": "package",
+      "path": "sequentialguid/4.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net462/SequentialGuid.dll",
+        "lib/net462/SequentialGuid.xml",
+        "lib/net8.0/SequentialGuid.dll",
+        "lib/net8.0/SequentialGuid.xml",
+        "lib/net9.0/SequentialGuid.dll",
+        "lib/net9.0/SequentialGuid.xml",
+        "lib/netstandard2.0/SequentialGuid.dll",
+        "lib/netstandard2.0/SequentialGuid.xml",
+        "lib/netstandard2.1/SequentialGuid.dll",
+        "lib/netstandard2.1/SequentialGuid.xml",
+        "sequentialguid.4.0.6.nupkg.sha512",
+        "sequentialguid.nuspec"
+      ]
+    },
+    "FastEndpoint.Domain/1.0.0": {
+      "type": "project",
+      "path": "../FastEndpoint.Domain/FastEndpoint.Domain.csproj",
+      "msbuildProject": "../FastEndpoint.Domain/FastEndpoint.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "FastEndpoint.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\joani\\.nuget\\packages\\": {}
@@ -31,7 +89,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\joani\\RiderProjects\\FastEndpointHost\\FastEndpoint.Domain\\FastEndpoint.Domain.csproj": {
+              "projectPath": "C:\\Users\\joani\\RiderProjects\\FastEndpointHost\\FastEndpoint.Domain\\FastEndpoint.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

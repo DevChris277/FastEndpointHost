@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\FastEndpoint.Domain\FastEndpoint.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
