@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FastEndpoint.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58a7b3f4a5a02fcbea56587d478aba654edb3272")]
 [assembly: System.Reflection.AssemblyProductAttribute("FastEndpoint.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FastEndpoint.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -864,6 +864,14 @@
           }
         }
       },
+      "SequentialGuid/4.0.6": {
+        "runtime": {
+          "lib/net9.0/SequentialGuid.dll": {
+            "assemblyVersion": "4.0.6.0",
+            "fileVersion": "4.0.6.0"
+          }
+        }
+      },
       "System.CodeDom/6.0.0": {
         "runtime": {
           "lib/net6.0/System.CodeDom.dll": {
@@ -956,6 +964,9 @@
       "System.Text.Json/9.0.3": {},
       "System.Threading.Channels/7.0.0": {},
       "FastEndpoint.Application/1.0.0": {
+        "dependencies": {
+          "FastEndpoint.Domain": "1.0.0"
+        },
         "runtime": {
           "FastEndpoint.Application.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -964,6 +975,9 @@
         }
       },
       "FastEndpoint.Domain/1.0.0": {
+        "dependencies": {
+          "SequentialGuid": "4.0.6"
+        },
         "runtime": {
           "FastEndpoint.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -1384,6 +1398,13 @@
       "sha512": "sha512-QBQPrKDVCXxTBE+r8tgjmFNKKHi4sKyczmip2XGUcjy8kk3quUNhttnjiMqC4sU50Hemmn4i5752Co26pnKe3A==",
       "path": "opentelemetry.extensions.hosting/1.9.0",
       "hashPath": "opentelemetry.extensions.hosting.1.9.0.nupkg.sha512"
+    },
+    "SequentialGuid/4.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8n9ZXiNNlkfQZiWf4mDKBxJ9W/aNSeuhpjR8gaE8bkEWse+Eub1GZx5KBAp3MzWPOU0gVdZXPAQ8PuvVF5mLEw==",
+      "path": "sequentialguid/4.0.6",
+      "hashPath": "sequentialguid.4.0.6.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",

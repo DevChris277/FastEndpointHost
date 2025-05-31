@@ -9,3 +9,4 @@ C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\n
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\refint\FastEndpoint.Contracts.dll
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\FastEndpoint.Contracts.pdb
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\ref\FastEndpoint.Contracts.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Contracts\obj\Debug\net9.0\FastEndpoint.Contracts.sourcelink.json

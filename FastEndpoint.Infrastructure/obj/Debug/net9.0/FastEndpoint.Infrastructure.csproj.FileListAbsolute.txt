@@ -17,3 +17,4 @@ C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Infrastructure\obj\De
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Infrastructure\obj\Debug\net9.0\FastEndpoint.Infrastructure.pdb
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Infrastructure\obj\Debug\net9.0\FastEndpoint.Infrastructure.genruntimeconfig.cache
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Infrastructure\obj\Debug\net9.0\ref\FastEndpoint.Infrastructure.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Infrastructure\obj\Debug\net9.0\FastEndpoint.Infrastructure.sourcelink.json

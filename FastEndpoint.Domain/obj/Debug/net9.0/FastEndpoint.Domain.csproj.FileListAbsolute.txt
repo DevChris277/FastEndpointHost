@@ -9,3 +9,5 @@ C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\refint\FastEndpoint.Domain.dll
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\FastEndpoint.Domain.pdb
 C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\ref\FastEndpoint.Domain.dll
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\FastEndpoint.Domain.csproj.AssemblyReference.cache
+C:\Users\joani\RiderProjects\FastEndpointHost\FastEndpoint.Domain\obj\Debug\net9.0\FastEndpoint.Domain.sourcelink.json
