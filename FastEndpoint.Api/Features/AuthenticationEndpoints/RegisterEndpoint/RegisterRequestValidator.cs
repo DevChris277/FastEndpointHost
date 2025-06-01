@@ -2,7 +2,7 @@ using FastEndpoint.Contracts.Authentication.Requests;
 using FastEndpoints;
 using FluentValidation;
 
-namespace FastEndpoint.Api.Features.RegisterEndpoint;
+namespace FastEndpoint.Api.Features.AuthenticationEndpoints.RegisterEndpoint;
 
 public class RegisterRequestValidator : Validator<RegisterRequest>
 {
