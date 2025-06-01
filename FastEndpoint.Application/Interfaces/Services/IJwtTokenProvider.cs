@@ -1,6 +1,8 @@
+using FastEndpoint.Domain.UserAggregate;
+
 namespace FastEndpoint.Application.Interfaces.Services;
 
 public interface IJwtTokenProvider
 {
-    string GenerateToken(string firstName, string lastName, string role, string email);
+    string GenerateToken(FeUser user);
 }

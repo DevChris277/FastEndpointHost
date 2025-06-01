@@ -1,5 +1,6 @@
 using FastEndpoint.Application.Interfaces.Services;
 using FastEndpoint.Domain.Common.Settings;
+using FastEndpoint.Domain.UserAggregate;
 using FastEndpoints.Security;
 using Microsoft.Extensions.Options;
 
@@ -14,7 +15,7 @@ public class JwtTokenProvider : IJwtTokenProvider
         _jwtSettings = jwtSettings.Value;
     }
 
-    public string GenerateToken(string firstName, string lastName, string role, string email)
+    public string GenerateToken(FeUser user)
     {
         var jwt = JwtBearer.CreateToken(options =>
         {
@@ -22,9 +23,9 @@ public class JwtTokenProvider : IJwtTokenProvider
             options.ExpireAt = DateTime.Now.AddMinutes(_jwtSettings.ExpiryMinutes);
             options.Issuer = _jwtSettings.Issuer;
             options.Audience = _jwtSettings.Audience;
-            options.User.Roles.Add(role);
-            options.User.Claims.Add(("Email", email));
-            options.User.Claims.Add(("UserName", $"{firstName} {lastName}"));
+            options.User.Roles.Add(user.Role);
+            options.User.Claims.Add(("Email", user.Email));
+            options.User.Claims.Add(("UserName", $"{user.FirstName} {user.LastName}"));
         });
 
         return jwt;

@@ -25,7 +25,6 @@ public class CreateAddressEndpoint
     public override void Configure()
     {
         Post("/address/create");
-        AllowAnonymous();
     }
 
     public override async Task HandleAsync(CreateAddressRequest req, CancellationToken ct)
