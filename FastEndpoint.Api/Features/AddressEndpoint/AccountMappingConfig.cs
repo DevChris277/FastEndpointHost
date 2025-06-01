@@ -14,8 +14,5 @@ public class AddressMappingConfig : IRegister
     {
         config.NewConfig<AddressResult, AddressResponse>()
             .Map(dest => dest, src => src.Address);
-
-        config.NewConfig<CreateAddressRequest, CreateAddressCommand>();
-        // config.NewConfig<UpdateAddressRequest, UpdateAddressCommand>();
     }
 }

@@ -24,21 +24,19 @@ public class CreateAddressEndpoint
 
     public override void Configure()
     {
-        Post("/address/create");
+        Post("/address/create"); 
     }
 
     public override async Task HandleAsync(CreateAddressRequest req, CancellationToken ct)
     {
-        var command = _mapper.Map<CreateAddressCommand>(req);
-        
-        if (await _addressRepository.GetAddressByStreetNameAndPostalCode(command.Street, command.PostalCode) is Address addressExists)
+        if (await _addressRepository.GetAddressByStreetNameAndPostalCode(req.Street, req.PostalCode) is Address addressExists)
             ThrowError("Address already exists.","Address.Duplicate");
         
         var address = Address.Create(
-            command.Province,
-            command.City,
-            command.Street,
-            command.PostalCode);
+            req.Province,
+            req.City,
+            req.Street,
+            req.PostalCode);
         
         await _addressRepository.Add(address);
         

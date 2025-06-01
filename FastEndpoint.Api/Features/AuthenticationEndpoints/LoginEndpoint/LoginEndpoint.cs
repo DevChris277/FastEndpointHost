@@ -30,15 +30,13 @@ public class LoginEndpoint : Endpoint<LoginRequest, AuthenticationResponse>
 
     public override async Task HandleAsync(LoginRequest req, CancellationToken ct)
     {
-        var query = _mapper.Map<LoginQuery>(req);
-        
         // 1. Validate the user exists
-        var user = _userRepository.GetUserByEmail(query.Email);
+        var user = _userRepository.GetUserByEmail(req.Email);
         if (user is null)
-            ThrowError("Account not Found", "Auth.NotFound");
+            ThrowError("Account not Found", StatusCodes.Status404NotFound);
         
         // 2. Validate the password is correct
-        if (user.Password != query.Password) ThrowError("Invalid Credentials", "Auth.InvalidCred");
+        if (user.Password != req.Password) ThrowError("Invalid Credentials", StatusCodes.Status401Unauthorized);
 
         // 3. Create JWT token
         var token = _jwtTokenProvider.GenerateToken(user);

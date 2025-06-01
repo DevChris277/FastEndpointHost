@@ -10,11 +10,11 @@ var builder = WebApplication.CreateBuilder();
 {
     builder.AddNpgsqlDbContext<FepDataContext>("fastEndpointDb");
     builder.Services
-        .AddPresentation(builder.Configuration)
-        .AddInfrastructure(builder.Configuration)
         .AddAuthenticationJwtBearer(s => s.SigningKey = builder.Configuration["JwtSettings:Secret"])
         .AddAuthorization()
         .AddFastEndpoints()
+        .AddPresentation(builder.Configuration)
+        .AddInfrastructure(builder.Configuration)
         .SwaggerDocument();
 }
 
@@ -29,9 +29,10 @@ var app = builder.Build();
         strategy.Execute(() => dbContext.Database.Migrate());
     }
     app
+        .UseFastEndpoints()
+            
         .UseAuthentication()
         .UseAuthorization()
-        .UseFastEndpoints()
         .UseSwaggerGen();
     app.Run();
 }
