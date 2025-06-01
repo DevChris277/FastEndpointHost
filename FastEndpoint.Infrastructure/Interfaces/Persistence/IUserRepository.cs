@@ -1,7 +1,7 @@
 using FastEndpoint.Domain.UserAggregate;
 using FastEndpoint.Domain.UserAggregate.ValueObject;
 
-namespace FastEndpoint.Application.Interfaces.Persistence;
+namespace Fastendpoint.Infrastructure.Interfaces.Persistence;
 
 public interface IUserRepository
 {

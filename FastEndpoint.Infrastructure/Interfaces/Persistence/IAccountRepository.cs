@@ -1,6 +1,6 @@
 using FastEndpoint.Domain.AccountAggregate;
 
-namespace FastEndpoint.Application.Interfaces.Persistence;
+namespace Fastendpoint.Infrastructure.Interfaces.Persistence;
 
 public interface IAccountRepository
 {

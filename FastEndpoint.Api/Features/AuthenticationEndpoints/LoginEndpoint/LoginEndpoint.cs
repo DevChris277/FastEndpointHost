@@ -1,6 +1,6 @@
-using FastEndpoint.Application.Interfaces.Persistence;
-using FastEndpoint.Application.Interfaces.Services;
 using FastEndpoint.Contracts.Authentication.Requests;
+using Fastendpoint.Infrastructure.Interfaces.Persistence;
+using Fastendpoint.Infrastructure.Interfaces.Services;
 using FastEndpoints;
 using FastEndpoints.Contracts.Authentication.Responses;
 

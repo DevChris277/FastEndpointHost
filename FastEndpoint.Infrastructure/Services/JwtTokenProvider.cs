@@ -1,6 +1,6 @@
-using FastEndpoint.Application.Interfaces.Services;
 using FastEndpoint.Domain.Common.Settings;
 using FastEndpoint.Domain.UserAggregate;
+using Fastendpoint.Infrastructure.Interfaces.Services;
 using FastEndpoints.Security;
 using Microsoft.Extensions.Options;
 

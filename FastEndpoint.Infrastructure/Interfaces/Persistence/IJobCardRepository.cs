@@ -1,6 +1,6 @@
 using FastEndpoint.Domain.JobcardAggregate;
 
-namespace FastEndpoint.Application.Interfaces.Persistence;
+namespace Fastendpoint.Infrastructure.Interfaces.Persistence;
 
 public interface IJobCardRepository
 {

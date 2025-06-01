@@ -21,7 +21,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\FastEndpoint.Application\FastEndpoint.Application.csproj" />
       <ProjectReference Include="..\FastEndpoint.Domain\FastEndpoint.Domain.csproj" />
     </ItemGroup>
 

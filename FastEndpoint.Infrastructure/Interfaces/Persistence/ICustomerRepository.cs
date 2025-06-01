@@ -1,6 +1,6 @@
 using FastEndpoint.Domain.CustomerAggregate;
 
-namespace FastEndpoint.Application.Interfaces.Persistence;
+namespace Fastendpoint.Infrastructure.Interfaces.Persistence;
 
 public interface ICustomerRepository
 {

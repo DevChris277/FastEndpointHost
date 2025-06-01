@@ -1,6 +1,6 @@
 using FastEndpoint.Domain.UserAggregate;
 
-namespace FastEndpoint.Application.Interfaces.Services;
+namespace Fastendpoint.Infrastructure.Interfaces.Services;
 
 public interface IJwtTokenProvider
 {

@@ -1,6 +1,6 @@
 using FastEndpoint.Domain.AddressAggregate;
 
-namespace FastEndpoint.Application.Interfaces.Persistence;
+namespace Fastendpoint.Infrastructure.Interfaces.Persistence;
 
 public interface IAddressRepository
 {

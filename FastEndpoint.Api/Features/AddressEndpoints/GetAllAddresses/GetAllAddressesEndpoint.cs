@@ -1,5 +1,5 @@
-using FastEndpoint.Application.Interfaces.Persistence;
 using FastEndpoint.Contracts.Address.Responses;
+using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using FastEndpoints;
 
 namespace FastEndpoint.Api.Features.AddressEndpoints.GetAllAddresses;

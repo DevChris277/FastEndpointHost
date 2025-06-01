@@ -1,6 +1,6 @@
-using FastEndpoint.Application.Interfaces.Persistence;
 using FastEndpoint.Contracts.Address.Responses;
 using FastEndpoint.Domain.AddressAggregate;
+using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using FastEndpoints;
 
 namespace FastEndpoint.Api.Features.AddressEndpoints.GetAddressByID;

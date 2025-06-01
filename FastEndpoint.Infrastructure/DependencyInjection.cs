@@ -1,7 +1,6 @@
-
-using FastEndpoint.Application.Interfaces.Persistence;
-using FastEndpoint.Application.Interfaces.Services;
 using FastEndpoint.Domain.Common.Settings;
+using Fastendpoint.Infrastructure.Interfaces.Persistence;
+using Fastendpoint.Infrastructure.Interfaces.Services;
 using FastEndpoint.Infrastructure.Persistence.Repositories;
 using FastEndpoint.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;

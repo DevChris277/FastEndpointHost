@@ -1,6 +1,6 @@
-using FastEndpoint.Application.Interfaces.Persistence;
 using FastEndpoint.Domain.CustomerAggregate;
 using FastEndpoint.Domain.CustomerAggregate.ValueObjects;
+using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace FastEndpoint.Infrastructure.Persistence.Repositories;
