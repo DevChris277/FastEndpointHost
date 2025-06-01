@@ -30,6 +30,8 @@ public sealed class Account : AggregateRoot<AccountId, Guid>
         MobileNumber = mobileNumber;
         Email = email;
         AddressId = addressId;
+        CreatedDateTime = DateTime.UtcNow;
+        UpdatedDateTime = DateTime.UtcNow;
     }
 
     public static Account Create(
@@ -64,6 +66,7 @@ public sealed class Account : AggregateRoot<AccountId, Guid>
         MobileNumber = mobileNumber;
         Email = email;
         AddressId = addressId;
+        UpdatedDateTime = DateTime.UtcNow;
     }
 
 #pragma warning disable CS8618

@@ -26,7 +26,8 @@ namespace FastEndpoint.Domain.AddressAggregate;
         City = city;
         Street = street;
         PostalCode = postalCode;
-        UpdatedDateTime = DateTime.Now;
+        CreatedDateTime = DateTime.UtcNow;
+        UpdatedDateTime = DateTime.UtcNow;
     }
 
     public static Address Create(
@@ -36,14 +37,14 @@ namespace FastEndpoint.Domain.AddressAggregate;
         string postalCode)
     {
         // TODO: enforce invariants
-        var user = new Address(
+        var address = new Address(
             AddressId.CreateUnique(),
             province,
             city,
             street,
             postalCode);
 
-        return user;
+        return address;
     }
 
     public void Update(
@@ -56,6 +57,7 @@ namespace FastEndpoint.Domain.AddressAggregate;
         City = city;
         Street = street;
         PostalCode = postalCode;
+        UpdatedDateTime = DateTime.UtcNow; 
     }
 
 #pragma warning disable CS8618

@@ -1,3 +1,4 @@
+using FastEndpoint.Api;
 using FastEndpoint.Infrastructure;
 using FastEndpoint.Infrastructure.Persistence;
 using FastEndpoints;
@@ -9,7 +10,7 @@ var builder = WebApplication.CreateBuilder();
 {
     builder.AddNpgsqlDbContext<FepDataContext>("fastEndpointDb");
     builder.Services
-        .AddPersistence(builder.Configuration)
+        .AddPresentation(builder.Configuration)
         .AddInfrastructure(builder.Configuration)
         .AddAuthenticationJwtBearer(s => s.SigningKey = builder.Configuration["JwtSettings:Secret"])
         .AddAuthorization()

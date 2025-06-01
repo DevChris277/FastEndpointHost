@@ -19,6 +19,8 @@ public class FeUser :AggregateRoot<FeUserId, Guid>
         Role = role;
         Email = email;
         Password = password;
+        CreatedDateTime = DateTime.UtcNow;
+        UpdatedDateTime = DateTime.UtcNow;
     }
 
 #pragma warning disable CS8618

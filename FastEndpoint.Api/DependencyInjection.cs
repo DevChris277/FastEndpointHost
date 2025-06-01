@@ -6,7 +6,7 @@ namespace FastEndpoint.Api;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddPersistence(
+    public static IServiceCollection AddPresentation(
         this IServiceCollection services,
         ConfigurationManager configuration)
     {

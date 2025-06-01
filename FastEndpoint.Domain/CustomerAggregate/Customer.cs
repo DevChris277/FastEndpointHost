@@ -33,6 +33,8 @@ public sealed class Customer : AggregateRoot<CustomerId, Guid>
         Email = email;
         AccountId = accountId;
         AddressId = addressId;
+        CreatedDateTime = DateTime.UtcNow;
+        UpdatedDateTime = DateTime.UtcNow;
     }
 
     public static Customer Create(
@@ -72,6 +74,7 @@ public sealed class Customer : AggregateRoot<CustomerId, Guid>
         Email = email;
         AccountId = accountId;
         AddressId = addressId;
+        UpdatedDateTime = DateTime.UtcNow;
     }
 
 #pragma warning disable CS8618

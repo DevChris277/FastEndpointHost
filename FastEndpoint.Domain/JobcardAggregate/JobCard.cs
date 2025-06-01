@@ -55,6 +55,8 @@ public sealed class JobCard : AggregateRoot<JobCardId, Guid>
         CoordinatorUserId = coordinatorUserId;
         AccountId = accountId;
         CustomerId = customerId;
+        CreatedDateTime = DateTime.UtcNow;
+        UpdatedDateTime = DateTime.UtcNow;
     }
 
     public static JobCard Create(
@@ -121,11 +123,13 @@ public sealed class JobCard : AggregateRoot<JobCardId, Guid>
         CoordinatorUserId = coordinatorUserId;
         AccountId = accountId;
         CustomerId = customerId;
+        UpdatedDateTime = DateTime.UtcNow;
     }
 
     public void UpdateStatus(int status)
     {
         Status = status;
+        UpdatedDateTime = DateTime.UtcNow;
     }
 
 #pragma warning disable CS8618
