@@ -1,7 +1,7 @@
 using FastEndpoint.Contracts.Address.Requests;
 using FluentValidation;
 
-namespace FastEndpoint.Api.Features.AddressEndpoint.CreateAddress;
+namespace FastEndpoint.Api.Features.AddressEndpoints.CreateAddress;
 
 public class CreateAddressCommandValidator : AbstractValidator<CreateAddressRequest>
 {
