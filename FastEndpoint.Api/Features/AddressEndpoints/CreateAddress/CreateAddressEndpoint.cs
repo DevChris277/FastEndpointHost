@@ -1,24 +1,19 @@
-using FastEndpoint.Api.Features.AddressEndpoint.Results;
 using FastEndpoint.Application.Interfaces.Persistence;
 using FastEndpoint.Contracts.Address.Requests;
 using FastEndpoint.Contracts.Address.Responses;
 using FastEndpoint.Domain.AddressAggregate;
 using FastEndpoints;
-using IMapper = MapsterMapper.IMapper;
 
 
-namespace FastEndpoint.Api.Features.AddressEndpoint.CreateAddress;
+namespace FastEndpoint.Api.Features.AddressEndpoints.CreateAddress;
 
-public class CreateAddressEndpoint
-    : Endpoint<CreateAddressRequest, AddressResponse>
+public class CreateAddressEndpoint : Endpoint<CreateAddressRequest, AddressResponse, CreateAddressMapper>
 {
     
-    private readonly IMapper _mapper;
     private readonly IAddressRepository _addressRepository;
     
-    public CreateAddressEndpoint(IMapper mapper, IAddressRepository addressRepository)
+    public CreateAddressEndpoint(IAddressRepository addressRepository)
     {
-        _mapper = mapper;
         _addressRepository = addressRepository;
     }
 
@@ -40,11 +35,9 @@ public class CreateAddressEndpoint
         
         await _addressRepository.Add(address);
         
-        var result = new AddressResult(
-            address,
-            address.Id.Value);
+        AddressResponse response = Map.FromEntity(address);
 
-        await SendAsync(_mapper.Map<AddressResponse>(result), cancellation: ct);
+        await SendAsync(response, cancellation: ct);
 
     }
 }
