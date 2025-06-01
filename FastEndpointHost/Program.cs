@@ -1,7 +1,7 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
 var db = builder.AddPostgres("db")
-    .WithPgAdmin().WithVolume("my-postgres-data", "/var/lib/postgresql/data");
+    .WithPgAdmin(); //.WithVolume("my-postgres-data", "/var/lib/postgresql/data");
 ;
 
 var fastEndpointDb = db.AddDatabase("fastEndpointDb");
