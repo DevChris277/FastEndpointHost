@@ -10,6 +10,8 @@
         <PackageReference Include="FastEndpoints" Version="6.2.0-beta.3" />
         <PackageReference Include="FastEndpoints.Security" Version="6.2.0-beta.3" />
         <PackageReference Include="FastEndpoints.Swagger" Version="6.2.0-beta.3" />
+        <PackageReference Include="Mapster" Version="7.4.0" />
+        <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3">
           <PrivateAssets>all</PrivateAssets>
@@ -20,6 +22,10 @@
     <ItemGroup>
       <ProjectReference Include="..\FastEndpoint.Contracts\FastEndpoint.Contracts.csproj" />
       <ProjectReference Include="..\FastEndpoint.Infrastructure\FastEndpoint.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\AuthenticationEndpoints\" />
     </ItemGroup>
 
 </Project>

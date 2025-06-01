@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder();
 {
     builder.AddNpgsqlDbContext<FepDataContext>("fastEndpointDb");
     builder.Services
+        .AddPersistence(builder.Configuration)
         .AddInfrastructure(builder.Configuration)
         .AddAuthenticationJwtBearer(s => s.SigningKey = builder.Configuration["JwtSettings:Secret"])
         .AddAuthorization()

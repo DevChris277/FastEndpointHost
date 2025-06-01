@@ -4,35 +4,40 @@ using FastEndpoint.Contracts.Authentication.Requests;
 using FastEndpoints;
 using FastEndpoints.Contracts.Authentication.Responses;
 
-namespace FastEndpoint.Test.Endpoints.Authentication;
+namespace FastEndpoint.Api.Features.AuthenticationEndpoints.RegisterEndpoint;
 
-public class LoginEndpoint(
-    IJwtTokenProvider jwtTokenProvider,
-    IUserRepository userRepository) : Endpoint<LoginRequest, AuthenticationResponse>
+public class RegisterEndpoint(IJwtTokenProvider jwtTokenProvider, IUserRepository userRepository)
+    : Endpoint<RegisterRequest, AuthenticationResponse>
 {
     private readonly IJwtTokenProvider _jwtTokenProvider = jwtTokenProvider;
     private readonly IUserRepository _userRepository = userRepository;
 
     public override void Configure()
     {
-        Post("/auth/login");
+        Post("/auth/register");
         AllowAnonymous();
     }
 
-    public override async Task HandleAsync(LoginRequest req, CancellationToken ct)
+    public override async Task HandleAsync(RegisterRequest req, CancellationToken ct)
     {
         // 1. Validate the user exists
-        var user = _userRepository.GetUserByEmail(req.Email);
-        if (user is null)
-            ThrowError("Account not Found", "Auth.NotFound");
+        if (_userRepository.GetUserByEmail(req.Email) is not null)
+            ThrowError("Account Already exists", "Auth.Duplicate");
         
-        // 2. Validate the password is correct
-        if (user.Password != req.Password) ThrowError("Invalid Credentials", "Auth.InvalidCred");
+        // 2. Create user (generate unique ID) & Persist to DB
+        var user = Domain.UserAggregate.FeUser.Create(
+            req.FirstName,
+            req.LastName,
+            req.Role,
+            req.Email,
+            req.Password);
+        
+        await _userRepository.Add(user);
 
-        // 3. Create JWT token
         var token = _jwtTokenProvider.GenerateToken(user.FirstName, user.LastName, user.Role, user.Email);
-        
+
         AuthenticationResponse response = new(user.FirstName, user.LastName, user.Role, user.Email, token);
+
         await SendAsync(response, cancellation: ct);
     }
 }
