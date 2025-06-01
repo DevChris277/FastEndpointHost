@@ -1,7 +1,4 @@
-using FastEndpoint.Api.Features.AuthenticationEndpoints.LoginEndpoint;
-using FastEndpoint.Api.Features.AuthenticationEndpoints.RegisterEndpoint;
 using FastEndpoint.Api.Features.AuthenticationEndpoints.Results;
-using FastEndpoint.Contracts.Authentication.Requests;
 using FastEndpoints.Contracts.Authentication.Responses;
 using Mapster;
 
