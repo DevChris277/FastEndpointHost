@@ -13,5 +13,5 @@ public class LoginMapper : Mapper<LoginRequest,AuthenticationResponse,FeUser>
         return entity;
     }
 
-    public AuthenticationResponse FromEntityWithToken(FeUser e,string? token = null) => new(e.FirstName,e.LastName,e.Role,e.Email,token);
+    public AuthenticationResponse FromEntityWithToken(FeUser e,string token) => new(e.FirstName,e.LastName,e.Role,e.Email,token);
 }
