@@ -25,7 +25,7 @@ public class UserRepository : IUserRepository
     {
         //ToDo: Add role check
         return await _dbContext.FeUser
-            .Where(u => u.Role == "coordinators").ToListAsync();
+            .Where(u => u.Role == "coordinator").ToListAsync();
     }
 
     public FeUser? GetUserByEmail(string email)

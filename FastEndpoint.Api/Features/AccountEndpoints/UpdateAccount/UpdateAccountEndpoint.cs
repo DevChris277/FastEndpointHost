@@ -22,7 +22,7 @@ public class UpdateAccountEndpoint : Endpoint<UpdateAccountRequest,AccountRespon
     
     public override async Task HandleAsync(UpdateAccountRequest req, CancellationToken ct)
     {
-        if (await _accountRepository.GetAccountByEmail(req.Email) is not Account account)
+        if (await _accountRepository.GetAccountByAccountId(req.AccountId) is not { } account)
         {
             ThrowError("Account not found", StatusCodes.Status404NotFound);
             return;

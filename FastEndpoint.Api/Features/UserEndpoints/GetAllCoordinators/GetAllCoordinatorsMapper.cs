@@ -7,5 +7,12 @@ namespace FastEndpoint.Api.Features.UserEndpoints.GetAllCoordinators;
 public class GetAllCoordinatorsMapper : ResponseMapper<UserResponse,FeUser>
 {
     public override UserResponse FromEntity(FeUser e) =>
-    base.FromEntity(e);
+        new UserResponse(
+            e.Id.Value,
+            e.FirstName,
+            e.LastName,
+            e.Role,
+            e.Email
+        );
+
 }

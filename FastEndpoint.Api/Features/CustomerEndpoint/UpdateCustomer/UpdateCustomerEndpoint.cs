@@ -24,7 +24,7 @@ public class UpdateCustomerEndpoint : Endpoint<UpdateCustomerRequest,CustomerRes
 
     public override async Task HandleAsync(UpdateCustomerRequest req, CancellationToken ct)
     {
-        if (await _customerRepository.GetCustomerByEmail(req.Email) is not Customer customer)
+        if (await _customerRepository.GetCustomerByCustomerId(req.CustomerId) is not {} customer)
         {
             ThrowError("Customer not found", StatusCodes.Status404NotFound);
             return;

@@ -16,7 +16,14 @@ public class CreateAccountMapper : Mapper<CreateAccountRequest,AccountResponse,A
 
     public override AccountResponse FromEntity(Account e)
     {
-        var response = base.FromEntity(e);
-        return response;
+        return new AccountResponse(
+            e.Id.Value,
+            e.Name,
+            e.MobileNumber,
+            e.Email,
+            e.CustomerIds.Select(customerId => customerId.Value.ToString()).ToList(),
+            e.AddressId.Value
+        );
+
     }
 }

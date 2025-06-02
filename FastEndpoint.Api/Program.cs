@@ -12,9 +12,9 @@ var builder = WebApplication.CreateBuilder();
     builder.Services
         .AddAuthenticationJwtBearer(s => s.SigningKey = builder.Configuration["JwtSettings:Secret"])
         .AddAuthorization()
-        .AddFastEndpoints()
         .AddPresentation(builder.Configuration)
         .AddInfrastructure(builder.Configuration)
+        .AddFastEndpoints()
         .SwaggerDocument();
 }
 
