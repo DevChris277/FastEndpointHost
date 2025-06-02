@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace FastEndpoint.Api.Features.AddressEndpoints.CreateAddress;
 
-public class CreateAddressCommandValidator : AbstractValidator<CreateAddressRequest>
+public class CreateAddressValidator : AbstractValidator<CreateAddressRequest>
 {
-    public CreateAddressCommandValidator()
+    public CreateAddressValidator()
     {
         RuleFor(x => x.Province)
             .NotEmpty()

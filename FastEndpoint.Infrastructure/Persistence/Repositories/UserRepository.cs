@@ -21,10 +21,11 @@ public class UserRepository : IUserRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<List<FeUser>> GetAllCoordinators(string role)
+    public async Task<List<FeUser>> GetAllCoordinators()
     {
+        //ToDo: Add role check
         return await _dbContext.FeUser
-            .Where(u => u.Role == role).ToListAsync();
+            .Where(u => u.Role == "coordinators").ToListAsync();
     }
 
     public FeUser? GetUserByEmail(string email)

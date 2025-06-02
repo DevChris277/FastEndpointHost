@@ -9,5 +9,5 @@ public interface IUserRepository
     Task<FeUser?> GetUserById(Guid id);
     Task<FeUser?> GetUserById(FeUserId id);
     Task Add(FeUser user);
-    Task<List<FeUser>> GetAllCoordinators(string role);
+    Task<List<FeUser>> GetAllCoordinators();
 }

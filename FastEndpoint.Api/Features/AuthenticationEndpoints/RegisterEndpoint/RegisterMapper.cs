@@ -13,6 +13,6 @@ public class RegisterMapper : Mapper<RegisterRequest, AuthenticationResponse, Fe
         return entity;
     }
 
-    public AuthenticationResponse FromEntityWithToken(FeUser e, string? token = null) =>
+    public AuthenticationResponse FromEntityWithToken(FeUser e, string token) =>
         new(e.FirstName, e.LastName, e.Role, e.Email, token);
 }
