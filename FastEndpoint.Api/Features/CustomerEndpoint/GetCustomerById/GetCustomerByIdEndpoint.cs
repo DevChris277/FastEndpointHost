@@ -1,17 +1,23 @@
+using FastEndpoint.Contracts.Address.Responses;
 using FastEndpoint.Contracts.Customer.Responses;
 using FastEndpoint.Domain.CustomerAggregate;
 using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using FastEndpoints;
+using IMapper = MapsterMapper.IMapper;
 
 namespace FastEndpoint.Api.Features.CustomerEndpoint.GetCustomerById;
 
-public class GetCustomerByIdEndpoint : EndpointWithoutRequest<CustomerResponse,GetCustomerByIdMapper>
+public class GetCustomerByIdEndpoint : EndpointWithoutRequest<CustomerCompleteResponse>
 {
     private readonly ICustomerRepository _customerRepository;
+    private readonly IAddressRepository _addressRepository;
+    private readonly IMapper _mapper;
 
-    public GetCustomerByIdEndpoint(ICustomerRepository customerRepository)
+    public GetCustomerByIdEndpoint(ICustomerRepository customerRepository, IMapper mapper, IAddressRepository addressRepository)
     {
         _customerRepository = customerRepository;
+        _mapper = mapper;
+        _addressRepository = addressRepository;
     }
 
     public override void Configure()
@@ -21,14 +27,23 @@ public class GetCustomerByIdEndpoint : EndpointWithoutRequest<CustomerResponse,G
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var customerId = Route<Guid>("id");
+        var customers = await _customerRepository.GetAllCustomers();
+        CustomerCompleteResponse response = new();
 
-        if (await _customerRepository.GetCustomerByCustomerId(customerId) is not Customer customer)
+
+        foreach (var customer in customers)
         {
-            ThrowError("Customer not found", StatusCodes.Status404NotFound);
-            return;
-        }
+            var address = await _addressRepository.GetAddressByAddressId(customer.AddressId.Value);
         
-        await SendAsync(Map.FromEntity(customer), cancellation: ct);
+            // Use Mapster to map the customer entity to response
+            var customerResponse = _mapper.Map<CustomerCompleteResponse>(customer);
+        
+            // Map the address separately
+            customerResponse.Address = _mapper.Map<AddressResponse>(address);
+        
+            response = customerResponse;
+        }
+
+        await SendAsync(response, cancellation: ct);
     }
 }

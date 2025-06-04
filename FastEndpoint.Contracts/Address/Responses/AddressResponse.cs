@@ -1,8 +1,10 @@
 namespace FastEndpoint.Contracts.Address.Responses;
 
-public record AddressResponse(
-    Guid AddressId,
-    string Province,
-    string City,
-    string Street,
-    string PostalCode);
+public class AddressResponse
+{
+    public Guid AddressId { get; set; }
+    public string Province { get; set; } = null!;
+    public string City { get; set; } = null!;
+    public string Street { get; set; } = null!;
+    public string PostalCode { get; set; } = null!;
+}

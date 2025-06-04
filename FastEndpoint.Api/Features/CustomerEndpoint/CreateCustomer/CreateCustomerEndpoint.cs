@@ -1,21 +1,23 @@
 using FastEndpoint.Contracts.Customer.Requests;
 using FastEndpoint.Contracts.Customer.Responses;
 using FastEndpoint.Domain.AccountAggregate.ValueObjects;
-using FastEndpoint.Domain.AddressAggregate;
 using FastEndpoint.Domain.AddressAggregate.ValueObject;
 using FastEndpoint.Domain.CustomerAggregate;
 using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using FastEndpoints;
+using IMapper = MapsterMapper.IMapper;
 
 namespace FastEndpoint.Api.Features.CustomerEndpoint.CreateCustomer;
 
-public class CreateCustomerEndpoint : Endpoint<CreateCustomerRequest,CustomerResponse,CreateCustomerMapper>
+public class CreateCustomerEndpoint : Endpoint<CreateCustomerRequest,CustomerResponse>
 {
     private readonly ICustomerRepository _customerRepository;
+    private readonly IMapper _mapper;
 
-    public CreateCustomerEndpoint(ICustomerRepository customerRepository)
+    public CreateCustomerEndpoint(ICustomerRepository customerRepository, IMapper mapper)
     {
         _customerRepository = customerRepository;
+        _mapper = mapper;
     }
     
     public override void Configure()
@@ -39,7 +41,7 @@ public class CreateCustomerEndpoint : Endpoint<CreateCustomerRequest,CustomerRes
         
         await _customerRepository.Add(customer);
         
-        var response = Map.FromEntity(customer);
+        var response = _mapper.Map<CustomerResponse>(customer);
         await SendAsync(response, cancellation: ct);
     }
 }

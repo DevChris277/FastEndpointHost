@@ -1,3 +1,10 @@
 namespace FastEndpoint.Contracts.User.Responses;
 
-public record UserResponse(Guid UserId, string FirstName, string LastName,string Role, string Email);
+public class UserResponse
+{
+    public Guid UserId { get; set; }
+    public string FirstName { get; set; } = null!;
+    public string LastName { get; set; } = null!;
+    public string Role { get; set; } = null!;
+    public string Email { get; set; } = null!;
+}

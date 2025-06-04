@@ -1,20 +1,24 @@
 using FastEndpoint.Contracts.Authentication.Requests;
+using FastEndpoint.Contracts.Authentication.Responses;
 using FastEndpoint.Domain.UserAggregate;
 using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using Fastendpoint.Infrastructure.Interfaces.Services;
 using FastEndpoints;
-using FastEndpoints.Contracts.Authentication.Responses;
+using IMapper = MapsterMapper.IMapper;
 
 namespace FastEndpoint.Api.Features.AuthenticationEndpoints.RegisterEndpoint;
 
-public class RegisterEndpoint : Endpoint<RegisterRequest, AuthenticationResponse, RegisterMapper>
+public class RegisterEndpoint : Endpoint<RegisterRequest, AuthenticationResponse>
 {
     private readonly IJwtTokenProvider _jwtTokenProvider;
     private readonly IUserRepository _userRepository;
-    public RegisterEndpoint(IJwtTokenProvider jwtTokenProvider, IUserRepository userRepository)
+    private readonly IMapper _mapper;
+    
+    public RegisterEndpoint(IJwtTokenProvider jwtTokenProvider, IUserRepository userRepository, IMapper mapper)
     {
         _jwtTokenProvider = jwtTokenProvider;
         _userRepository = userRepository;
+        _mapper = mapper;
     }
     
     public override void Configure()
@@ -42,7 +46,8 @@ public class RegisterEndpoint : Endpoint<RegisterRequest, AuthenticationResponse
 
         var token = _jwtTokenProvider.GenerateToken(user);
         
-        AuthenticationResponse response = Map.FromEntityWithToken(user, token);
+        var response = _mapper.Map<AuthenticationResponse>(user);
+        response.Token = token;
 
         await SendAsync(response, cancellation: ct);
     }

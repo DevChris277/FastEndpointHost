@@ -3,16 +3,19 @@ using FastEndpoint.Contracts.Address.Responses;
 using FastEndpoint.Domain.AddressAggregate;
 using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using FastEndpoints;
+using IMapper = MapsterMapper.IMapper;
 
 namespace FastEndpoint.Api.Features.AddressEndpoints.GetAddressSearch;
 
-public class GetAddressSearchEndpoint : Endpoint<GetAddressesSearchRequest,List<AddressResponse>,GetAddressSearchMapper>
+public class GetAddressSearchEndpoint : Endpoint<GetAddressesSearchRequest,List<AddressResponse>>
 {
     private readonly IAddressRepository _addressRepository;
+    private readonly IMapper _mapper;
 
-    public GetAddressSearchEndpoint(IAddressRepository addressRepository)
+    public GetAddressSearchEndpoint(IAddressRepository addressRepository, IMapper mapper)
     {
         _addressRepository = addressRepository;
+        _mapper = mapper;
     }
     
     public override void Configure()
@@ -28,7 +31,7 @@ public class GetAddressSearchEndpoint : Endpoint<GetAddressesSearchRequest,List<
             return;
         }
         
-        var response = addresses.Select(Map.FromEntity).ToList();
+        var response = _mapper.Map<List<AddressResponse>>(addresses);
         await SendAsync(response, cancellation: ct);
     }
 }

@@ -1,17 +1,19 @@
 using FastEndpoint.Contracts.User.Responses;
-using FastEndpoint.Domain.UserAggregate;
 using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using FastEndpoints;
+using IMapper = MapsterMapper.IMapper;
 
 namespace FastEndpoint.Api.Features.UserEndpoints.GetAllCoordinators;
 
-public class GetAllCoordinatorsEndpoint : EndpointWithoutRequest<List<UserResponse>,GetAllCoordinatorsMapper>
+public class GetAllCoordinatorsEndpoint : EndpointWithoutRequest<List<UserResponse>>
 {
     private readonly IUserRepository _userRepository;
+    private readonly IMapper _mapper;
 
-    public GetAllCoordinatorsEndpoint(IUserRepository userRepository)
+    public GetAllCoordinatorsEndpoint(IUserRepository userRepository, IMapper mapper)
     {
         _userRepository = userRepository;
+        _mapper = mapper;
     }
     
     public override void Configure()
@@ -23,7 +25,7 @@ public class GetAllCoordinatorsEndpoint : EndpointWithoutRequest<List<UserRespon
     {
         var users = await _userRepository.GetAllCoordinators();
         
-        var response = users.Select(Map.FromEntity).ToList();
+        var response = _mapper.Map<List<UserResponse>>(users);
         await SendAsync(response, cancellation: ct);
     }
 }

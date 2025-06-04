@@ -2,16 +2,19 @@ using FastEndpoint.Contracts.Address.Responses;
 using FastEndpoint.Domain.AddressAggregate;
 using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using FastEndpoints;
+using IMapper = MapsterMapper.IMapper;
 
 namespace FastEndpoint.Api.Features.AddressEndpoints.GetAddressByID;
 
-public class GetAddressByIDEndpoint : EndpointWithoutRequest<AddressResponse, GetAddressByIDMapper>
+public class GetAddressByIDEndpoint : EndpointWithoutRequest<AddressResponse>
 {
     private readonly IAddressRepository _addressRepository;
+    private readonly IMapper _mapper;
 
-    public GetAddressByIDEndpoint(IAddressRepository addressRepository)
+    public GetAddressByIDEndpoint(IAddressRepository addressRepository, IMapper mapper)
     {
         _addressRepository = addressRepository;
+        _mapper = mapper;
     }
     
     public override void Configure()
@@ -29,6 +32,7 @@ public class GetAddressByIDEndpoint : EndpointWithoutRequest<AddressResponse, Ge
             return;
         }
         
-        await SendAsync(Map.FromEntity(address), cancellation: ct);
+        var response = _mapper.Map<AddressResponse>(address);
+        await SendAsync(response, cancellation: ct);
     }
 }

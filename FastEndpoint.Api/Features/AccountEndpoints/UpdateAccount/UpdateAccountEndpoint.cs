@@ -1,18 +1,20 @@
 using FastEndpoint.Contracts.Account.Requests;
 using FastEndpoint.Contracts.Account.Responses;
-using FastEndpoint.Domain.AccountAggregate;
 using FastEndpoint.Domain.AddressAggregate.ValueObject;
 using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using FastEndpoints;
+using IMapper = MapsterMapper.IMapper;
 
 namespace FastEndpoint.Api.Features.AccountEndpoints.UpdateAccount;
 
-public class UpdateAccountEndpoint : Endpoint<UpdateAccountRequest,AccountResponse,UpdateAccountMapper>
+public class UpdateAccountEndpoint : Endpoint<UpdateAccountRequest,AccountResponse>
 {
     private readonly IAccountRepository _accountRepository;
-    public UpdateAccountEndpoint(IAccountRepository accountRepository)
+    private readonly IMapper _mapper;
+    public UpdateAccountEndpoint(IAccountRepository accountRepository, IMapper mapper)
     {
         _accountRepository = accountRepository;
+        _mapper = mapper;
     }
     
     public override void Configure()
@@ -36,7 +38,7 @@ public class UpdateAccountEndpoint : Endpoint<UpdateAccountRequest,AccountRespon
         
         await _accountRepository.Update(account);
         
-        var response = Map.FromEntity(account);
+        var response = _mapper.Map<AccountResponse>(account);
         await SendAsync(response, cancellation: ct);
     }
 }

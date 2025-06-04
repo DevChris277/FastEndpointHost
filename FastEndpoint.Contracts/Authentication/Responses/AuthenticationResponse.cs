@@ -1,10 +1,10 @@
-namespace FastEndpoints.Contracts.Authentication.Responses;
+namespace FastEndpoint.Contracts.Authentication.Responses;
 
-public record AuthenticationResponse(
-    string FirstName,
-    string LastName,
-    string Role,
-    string Email,
-    string Token)
+public class AuthenticationResponse
 {
+    public string FirstName { get; set; } = null!;
+    public string LastName { get; set; } = null!;
+    public string Role { get; set; } = null!;
+    public string Email { get; set; } = null!;
+    public string? Token { get; set; }
 }

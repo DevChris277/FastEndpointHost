@@ -3,16 +3,19 @@ using FastEndpoint.Contracts.Address.Responses;
 using FastEndpoint.Domain.AddressAggregate;
 using Fastendpoint.Infrastructure.Interfaces.Persistence;
 using FastEndpoints;
+using IMapper = MapsterMapper.IMapper;
 
 namespace FastEndpoint.Api.Features.AddressEndpoints.UpdateAddress;
 
-public class UpdateAddressEndpoint : Endpoint<UpdateAddressRequest, AddressResponse, UpdateAddressMapper>
+public class UpdateAddressEndpoint : Endpoint<UpdateAddressRequest, AddressResponse>
 {
     private readonly IAddressRepository _addressRepository;
+    private readonly IMapper _mapper;
 
-    public UpdateAddressEndpoint(IAddressRepository addressRepository)
+    public UpdateAddressEndpoint(IAddressRepository addressRepository, IMapper mapper)
     {
         _addressRepository = addressRepository;
+        _mapper = mapper;
     }
     public override void Configure()
     {
@@ -35,7 +38,7 @@ public class UpdateAddressEndpoint : Endpoint<UpdateAddressRequest, AddressRespo
 
         await _addressRepository.Update(address);
 
-        AddressResponse response = Map.FromEntity(address);
+        var response = _mapper.Map<AddressResponse>(address);
 
         await SendAsync(response, cancellation: ct);
         
