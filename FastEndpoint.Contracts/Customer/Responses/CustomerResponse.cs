@@ -6,5 +6,5 @@ public record CustomerResponse(
     string LastName,
     string MobileNumber,
     string Email,
-    Guid AccountId,
-    Guid AddressId);
+    Guid AddressId,
+    Guid AccountId);

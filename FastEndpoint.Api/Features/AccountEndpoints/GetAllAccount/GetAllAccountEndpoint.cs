@@ -4,7 +4,7 @@ using FastEndpoints;
 
 namespace FastEndpoint.Api.Features.AccountEndpoints.GetAllAccount;
 
-public class GetAllAccountEndpoint : EndpointWithoutRequest<List<AccountResponse>,GetAllAccountMapper>
+public class GetAllAccountEndpoint : EndpointWithoutRequest<List<NewAccountResponse>,GetAllAccountMapper>
 {
     private readonly IAccountRepository _accountRepository;
 
@@ -22,7 +22,9 @@ public class GetAllAccountEndpoint : EndpointWithoutRequest<List<AccountResponse
     {
         var accounts = await _accountRepository.GetAllAccounts();
         
+        // Use the FastEndpoint mapper pattern
         var response = accounts.Select(Map.FromEntity).ToList();
+
         await SendAsync(response, cancellation: ct);
     }
 }
