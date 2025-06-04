@@ -1,7 +1,4 @@
 using System.Reflection;
-using FastEndpoint.Api.Interfaces;
-using FastEndpoint.Api.Services;
-
 namespace FastEndpoint.Api;
 
 public static class DependencyInjection
@@ -10,7 +7,6 @@ public static class DependencyInjection
         this IServiceCollection services,
         ConfigurationManager configuration)
     {
-        services.AddScoped<IAccountMapperConfig, AccountMapperConfig>();
         return services;
     }
 }

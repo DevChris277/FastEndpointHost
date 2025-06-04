@@ -7,10 +7,14 @@ namespace FastEndpoint.Api.Features.AccountEndpoints.GetAllAccount;
 public class GetAllAccountEndpoint : EndpointWithoutRequest<List<NewAccountResponse>,GetAllAccountMapper>
 {
     private readonly IAccountRepository _accountRepository;
+    private readonly ICustomerRepository _customerRepository;
+    private readonly IAddressRepository _addressRepository;
 
-    public GetAllAccountEndpoint(IAccountRepository accountRepository)
+    public GetAllAccountEndpoint(IAccountRepository accountRepository, IAddressRepository addressRepository, ICustomerRepository customerRepository)
     {
         _accountRepository = accountRepository;
+        _addressRepository = addressRepository;
+        _customerRepository = customerRepository;
     }
     
     public override void Configure()
@@ -22,9 +26,13 @@ public class GetAllAccountEndpoint : EndpointWithoutRequest<List<NewAccountRespo
     {
         var accounts = await _accountRepository.GetAllAccounts();
         
-        // Use the FastEndpoint mapper pattern
-        var response = accounts.Select(Map.FromEntity).ToList();
+        var response = new List<NewAccountResponse>();
+        foreach (var account in accounts)
+        {
+            var mappedAccount = await Map.FromEntityAsync(account, ct);
+            response.Add(mappedAccount);
+        }
 
-        await SendAsync(response, cancellation: ct);
+        await SendAsync(response.ToList(), cancellation: ct);
     }
 }
